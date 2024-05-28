@@ -1,6 +1,7 @@
 package com.example.tiptime
 
 import androidx.compose.ui.test.junit4.createComposeRule
+import com.example.tiptime.ui.theme.TipTimeTheme
 import org.junit.Rule
 import org.junit.Test
 
@@ -15,9 +16,12 @@ class TipUITests {
     // with the regular app APK and then the "test APK" runs its tests against the "app APK"
     @Test
     fun calculate_20_percent_tip() {
-        // As you can see this sets the UI content of the compose test rule
+        // As you can see this sets the UI content of the compose test rule, you need to do this
+        // so you can interact with the UI through your compose rule
         composeTestRule.setContent {
-
+            TipTimeTheme {
+                TipTimeLayout()
+            }
         }
     }
 }
