@@ -27,5 +27,6 @@ class TipUITests {
         }
 
         composeTestRule.onNodeWithText("Bill Amount").performTextInput("10")
+        composeTestRule.onNodeWithText("Tip Percentage").performTextInput("20")
     }
 }
